@@ -7,5 +7,6 @@ import java.util.List;
 public interface AirQualityDataService {
 
     void fetchAndSaveDataForCity(Integer cityId);
-    List<AirQualityDataDTO> getLatestDataByCity(Long cityId);
+
+    List<AirQualityDataDTO> getLatestDataByCity(Integer cityId);
 }

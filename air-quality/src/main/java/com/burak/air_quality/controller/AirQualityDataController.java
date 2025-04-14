@@ -10,9 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/airquality")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AirQualityDataController {
 
-
+    @Autowired
     private AirQualityDataServiceImpl airQualityDataService;
 
     @PostMapping("/{cityId}")
@@ -22,7 +23,7 @@ public class AirQualityDataController {
     }
 
     @GetMapping("/{cityId}")
-    public List<AirQualityDataDTO> getLatestData(@PathVariable Long cityId) {
+    public List<AirQualityDataDTO> getLatestData(@PathVariable Integer cityId) {
         return airQualityDataService.getLatestDataByCity(cityId);
     }
 }

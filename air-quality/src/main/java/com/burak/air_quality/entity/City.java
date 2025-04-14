@@ -1,13 +1,18 @@
 package com.burak.air_quality.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import org.locationtech.jts.geom.MultiPolygon;
 import org.locationtech.jts.geom.Point;
 
 @Entity
 @Table(name = "cities", schema = "public")
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class City {
 
     @Id

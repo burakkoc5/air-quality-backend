@@ -33,7 +33,7 @@ public class OpenWeatherMapClient {
         JsonNode components = airQualityResponseJson.path("list").get(0).path("components");
 
 
-        String weatherUrl = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s", latitude, longitude, apiKey);
+        String weatherUrl = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s&units=metric", latitude, longitude, apiKey);
         ResponseEntity<JsonNode> weatherResponse = restTemplate.getForEntity(weatherUrl, JsonNode.class);
 
         if (weatherResponse.getStatusCode() != HttpStatus.OK) {

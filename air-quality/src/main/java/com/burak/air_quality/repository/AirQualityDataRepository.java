@@ -8,7 +8,6 @@ import java.util.List;
 
 @Repository
 public interface AirQualityDataRepository extends JpaRepository<AirQualityData, Long> {
-    List<AirQualityData> findByCityId(Long cityId);
-    List<AirQualityData> findTop10ByCityIdOrderByTimestampDesc(Long cityId);
+    List<AirQualityData> findTop10ByCityGidOrderByTimestampDesc(Integer cityId);
 
 }

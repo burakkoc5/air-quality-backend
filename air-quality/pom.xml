@@ -67,6 +67,12 @@
 			<artifactId>jts-core</artifactId>
 			<version>1.19.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-spatial -->
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-spatial</artifactId>
+			<version>6.6.11.Final</version>
+		</dependency>
 	</dependencies>
 
 	<build>

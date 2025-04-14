@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface CityService {
     List<CityDTO> getAllCities();
-    City getCityById(Integer id);
+    CityDTO getCityById(Integer id);
     Optional<City> getCityByName(String name);
 }
